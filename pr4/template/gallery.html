@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Photo</th>
+        </tr>
+        {% for img in images %}
+        <tr>
+            <td>{{ img.name }}</td>
+            <td><a href="{% url 'app1:details' img.id %}"><img src="{{img.photo.url}}" height="100px"width="200px">
+        {% endfor %}</td>
+        </tr>
+    </table>
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+  <table>
+    <tr>
+        <th>Name</th>
+        <th>Photo</th>
+        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+    </tr>
+    {% for img in images %}
+    <tr>
+        <td>{{img.Name}}</td>
+        <td><a href="{% url 'app1:details' img.id %}"><img src="{{ img.photo.url }}" height="150px" width="250px"></a></td>
+        
+    </tr>
+    {% endfor %}</td>
+    </tr>
+</table>
+</html>
